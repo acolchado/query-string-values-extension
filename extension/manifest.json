@@ -1,0 +1,17 @@
+{
+   "name": "Query String Values",
+   "browser_action": {
+      "default_icon": "img/icon-48.png",
+      "default_title": "Query String Values",
+      "default_popup": "popup.html"
+   },
+   "description": "Shows you all of the query string parameter values in one view.",
+   "icons": {
+      "16": "img/icon-16.png",
+      "48": "img/icon-48.png",
+      "128": "img/icon-128.png"
+   },
+   "permissions": ["tabs"],
+   "version": "0.0.1.0",
+   "manifest_version": 2
+}
