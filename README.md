@@ -2,6 +2,7 @@
 
 Chrome extension that allows you to see the current tab's query string values in a clean form.
 
+![Alt Query String Values] (https://raw.github.com/acolchado/query-string-values-extension/master/extension/docs/Screenshot.JPG)
 
 ## Install Manually
 I have not yet published this extension to the Chrome Store, it takes longer to package than to create, 
