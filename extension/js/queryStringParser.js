@@ -21,7 +21,6 @@ function QueryStringParser(){
 		var queryIndex = url.indexOf("?");
 		if(queryIndex >= 0 && (queryIndex+1) < url.length)
 		{
-			console.log(url.substring(queryIndex+1));
 			return url.substring(queryIndex+1);
 		}
 		return "";
