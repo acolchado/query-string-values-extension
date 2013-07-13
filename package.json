@@ -1,0 +1,34 @@
+{
+    "name": "Query-String-Values",
+    "version": "0.0.1",
+    "description": "View all of the query string parameters in the current tab's url.",
+    "homepage": "https://github.com/acolchado/query-string-values-extension/",
+    "authors": "https://github.com/acolchado/query-string-values-extension/graphs/contributors",
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:acolchado/query-string-values-extension.git"
+    },
+    "keywords": [
+        "query string",
+        "chrome",
+        "extenstion"
+    ],
+    "license": "MIT",
+    "dependencies": {},
+    "devDependencies": {
+        "grunt-cli": "latest",
+        "grunt": "latest",
+        "grunt-contrib-uglify": "latest",
+        "grunt-contrib-jshint": "latest",
+        "grunt-contrib-copy": "latest",
+        "grunt-contrib-clean": "latest",
+        "grunt-contrib-watch": "latest",
+        "grunt-contrib-concat": "latest",
+        "grunt-contrib-compress": "latest",
+        "grunt-karma": "latest",
+        "grunt-file-creator": "latest",
+        "jasmine-node": "latest",
+        "chai": "latest",
+        "karma": "latest"
+    }
+}

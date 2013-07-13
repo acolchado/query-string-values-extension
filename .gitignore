@@ -1,1 +1,8 @@
 .DS_Store
+temp
+node_modules
+*.swp
+.*.swp
+*.iml
+.idea
+build/temp
