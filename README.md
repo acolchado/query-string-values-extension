@@ -1,8 +1,13 @@
-# Query String Values Chrome Extension
+![Alt Query String Values] (https://raw.github.com/acolchado/query-string-values-extension/master/extension/img/icon-38.png) Query String Values Chrome Extension
+===
 
 Chrome extension that allows you to see the current tab's query string values in a clean form.
 
 ![Alt Query String Values] (https://raw.github.com/acolchado/query-string-values-extension/master/docs/Screenshot.JPG)
+
+## Install from the Google Chrome Store
+
+Visit the [Query String Values] extension page at the [Google Chrome Store]
 
 ## Install Manually
 I have not yet published this extension to the Chrome Store, it takes longer to package than to create, 
@@ -42,3 +47,7 @@ If you have any suggestions, please submit them as a pull request. I will take a
 ## License
 
 http://acolchado.mit-license.org/
+
+
+[Google Chrome Store]: https://chrome.google.com/webstore/detail/query-string-values/cjhbheckcgogpgibfjfhkofioikhpgio
+[Query String Values]: https://chrome.google.com/webstore/detail/query-string-values/cjhbheckcgogpgibfjfhkofioikhpgio
