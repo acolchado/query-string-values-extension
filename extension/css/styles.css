@@ -2,7 +2,7 @@
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box; 
-	font-family: Arial, Helvetica, Garuda, sans-serif;
+	font-family: sans-serif;
 	font-size: 11px;
 }
 
@@ -36,7 +36,7 @@ header {
 .query-values {
 	width: 100%;
 	border-collapse: collapse;
-	border: 1px solid #000;
+	border: 1px solid #ccc;
 }
 
 .query-values tr th {
@@ -46,14 +46,14 @@ header {
 
 .query-values tr td, .query-values tr th {
 	width: 50%;
-	border-left: 1px solid #000;
-	border-top: 1px solid #000;
-	padding: 1px 3px;
+	border-left: 1px solid #ccc;
+	border-top: 1px solid #ccc;
+	padding: 3px 5px;
 	background-color: #ccc;
 }
 
 .query-values tr:nth-child(even) td {
-	background-color: #FFFFCC
+	background-color: #fffff4;
 }
 
 .query-values tr:nth-child(odd) td {
@@ -66,4 +66,13 @@ header {
 
 .query-values tr th {
 	border-top: none;
+}
+
+.copy {
+	margin-top: 15px;
+}
+
+.copy a {
+	color: #ccc;
+	font-size: 9px;
 }

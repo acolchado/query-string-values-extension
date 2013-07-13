@@ -11,6 +11,7 @@
       "38": "img/icon-38.png",
       "128": "img/icon-128.png"
    },
+   "options_page": "options.html",
    "permissions": ["tabs"],
    "version": "0.0.1.0",
    "manifest_version": 2
