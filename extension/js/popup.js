@@ -1,6 +1,6 @@
 ﻿window.onload = function(){
 	chrome.tabs.getSelected(null,function(tab) {
-	    window.processTabUrl(tab.url);
+		window.processTabUrl(tab.url);
 	});
 };
 
@@ -10,7 +10,7 @@ window.processTabUrl = function(tabUrl) {
 	var values = parser.getValues(query);
 	var itemsFound = false;
 
-	if(values!=null){
+	if(values!==null){
 		var table = document.getElementById("query-values");
 		for(var name in values){
 			itemsFound = true;
@@ -27,9 +27,9 @@ window.processTabUrl = function(tabUrl) {
 		}
 	}
 
-	var elementToShow = (itemsFound) 
-		? document.getElementById("scrollable")
-		: document.getElementById("message");
+	var elementToShow = (itemsFound) ? 
+		document.getElementById("scrollable") :
+		document.getElementById("message");
 
 	elementToShow.className += " show";
 };

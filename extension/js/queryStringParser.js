@@ -6,7 +6,7 @@ function QueryStringParser(){
 		var query = this.getQueryFromUrl(url);
 		var values = {};
 		var match;
-		while (match = this.regExQuerySearch.exec(query)){
+		while (!!(match = this.regExQuerySearch.exec(query))){
 			values[this.decode(match[1])] = this.decode(match[2]);
 		}
 
@@ -14,8 +14,8 @@ function QueryStringParser(){
 	};
 
 	this.decode = function(value){
-		return decodeURIComponent(value.replace(this.regExPlusSymbol, " "))
-	}
+		return decodeURIComponent(value.replace(this.regExPlusSymbol, " "));
+	};
 
 	this.getQueryFromUrl = function(url){
 		var queryIndex = url.indexOf("?");
