@@ -10,6 +10,7 @@ Chrome extension that allows you to see the current tab's query string values in
 Visit the [Query String Values] extension page at the [Google Chrome Store]
 
 ## Install Manually
+
 I have not yet published this extension to the Chrome Store, it takes longer to package than to create, 
 but for now you can install directly. 
 
@@ -17,17 +18,17 @@ The steps are for Mac/Linux, but apply to Windows and others, with some adjustme
 
 Clone the repo to an easy to reach directory
 
-  $ mkdir ~/Code
-  $ cd ~/Code
-  $ git clone git@github.com:acolchado/query-string-values-extension.git
+	$ mkdir ~/Code
+	$ cd ~/Code
+	$ git clone git@github.com:acolchado/query-string-values-extension.git
   
-  or https
+or https
   
-  $ git clone https://github.com/acolchado/query-string-values-extension.git
+	$ git clone https://github.com/acolchado/query-string-values-extension.git
 
 Go to the Chrome extensions manager.
 
-  $ open chrome://extensions/
+	$ open chrome://extensions/
   
 From the Extensions Manager follow these steps:
 
