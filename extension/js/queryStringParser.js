@@ -2,8 +2,9 @@ function QueryStringParser(){
 	this.regExPlusSymbol = /\+/g;
 	this.regExQuerySearch = /([^&=]+)=?([^&]*)/g;
 
-	this.getValues = function(url){
-		var query = this.getQueryFromUrl(url);
+	this.getValues = function(url, type){
+		var query = this.getQueryFromUrl(url, type);
+		var hash = this.getQueryFromUrl(url, type);
 		var values = {};
 		var match;
 		while (!!(match = this.regExQuerySearch.exec(query))){
@@ -17,10 +18,11 @@ function QueryStringParser(){
 		return decodeURIComponent(value.replace(this.regExPlusSymbol, " "));
 	};
 
-	this.getQueryFromUrl = function(url){
+	this.getQueryFromUrl = function(url, type){
     var anchor = document.createElement('a');
     anchor.href = url;
-    if (anchor.search !== "") return anchor.search.substring(1);
+    if (anchor.search !== "" && type === "query") return anchor.search.substring(1);
+    if (anchor.hash !== "" && type === "hash") return anchor.hash.substring(1);
     return "";
 	};
 }

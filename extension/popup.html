@@ -9,17 +9,31 @@
 </head>
 <body id="page-popup">
 
-	<header>Query String Values</header>
 	<div id="message" class="message">The current tab's url has no query values...</div>
 	<div id="scrollable" class="scrollable">
-		<table id="query-values" class="query-values">
+
+	  <header>Query String Values</header>
+		<table id="query-values" class="values">
 			<tr>
 				<th>Name</th>
 				<th>Values</th>
 			</tr>
+    <a href="#" id="addRow-query">add row</a>
 		</table>
+
+    <br/>
+    <br/>
+    <header>Hash String Values</header>
+		<table id="hash-values" class="values">
+			<tr>
+				<th>Name</th>
+				<th>Values</th>
+			</tr>
+    <a href="#" id="addRow-hash">add row</a>
+		</table>
+
 	</div>
-  <a href="#" id="addRow">add row</a>
+
   <!--<a href="#" id="copyLink">copy link</a>-->
   <a href="#" id="goLink">go</a>
 

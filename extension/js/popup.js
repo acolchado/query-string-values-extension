@@ -1,13 +1,13 @@
 ﻿window.onload = function(){
 	chrome.tabs.getSelected(null,function(tab) {
 		window.processTabUrl(tab.url);
-		var newRow = document.getElementById("addRow");
-    newRow.addEventListener('click', function () { addRow("query-values", "", "", tab.url) });
+		var newRowQ = document.getElementById("addRow-query");
+		var newRowH = document.getElementById("addRow-hash");
+    newRowQ.addEventListener('click', function () { addRow("query-values", "", "", tab.url) });
+    newRowH.addEventListener('click', function () { addRow("hash-values", "", "", tab.url) });
 
 		var goLink = document.getElementById("goLink");
     goLink.addEventListener('click', function () { new_page(tab.url) });
-
-    //TODO: add ability to parse #hash value query parameters
 
     //TODO: add ability to copy the link with ZeroCopy.js
 		//var copyLink = document.getElementById("copyLink");
@@ -21,20 +21,30 @@ window.new_page = function (tabUrl) {
 
 window.new_link = function (tabUrl) {
   var qs = {},
+      ht = {},
       key = '',
       val = '',
       new_url = document.createElement('a'),
-      table = document.getElementById('query-values'),
-      cells = table.getElementsByTagName('td');
+      qtable = document.getElementById('query-values'),
+      htable = document.getElementById('hash-values'),
+      qcells = qtable.getElementsByTagName('td'),
+      hcells = htable.getElementsByTagName('td');
 
-  for (var i = 0, len = cells.length; i < len; i += 2){
-    key = cells[i].innerHTML;
-    val = cells[i + 1].innerHTML.replace("&nbsp;", "");
+  for (var i = 0, len = qcells.length; i < len; i += 2){
+    key = qcells[i].innerHTML;
+    val = qcells[i + 1].innerHTML.replace("&nbsp;", "");
     qs[key] = val;
+  }
+
+  for (var i = 0, len = hcells.length; i < len; i += 2){
+    key = hcells[i].innerHTML;
+    val = hcells[i + 1].innerHTML.replace("&nbsp;", "");
+    ht[key] = val;
   }
 
   new_url.href = tabUrl;
   new_url.search = window.toQueryString(qs);
+  new_url.hash = window.toQueryString(ht);
   return new_url.href;
 };
 
@@ -81,14 +91,21 @@ window.addRow = function (table_id, name, value, tabUrl) {
 window.processTabUrl = function(tabUrl) {
 	var query = tabUrl;
 	var parser = new QueryStringParser();
-	var values = parser.getValues(query);
+	var values = parser.getValues(query, "query");
+	var hash = parser.getValues(query, "hash");
 	var itemsFound = false;
 
-	if(values!==null){
-		var table = document.getElementById("query-values");
+	if(values !== null){
 		for(var name in values){
 			itemsFound = true;
       addRow("query-values", name, values[name], tabUrl);
+		}
+	}
+
+	if(hash !== null){
+		for(var name in hash){
+			itemsFound = true;
+      addRow("hash-values", name, hash[name], tabUrl);
 		}
 	}
 
