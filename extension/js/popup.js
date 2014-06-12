@@ -7,6 +7,8 @@
 		var goLink = document.getElementById("goLink");
     goLink.addEventListener('click', function () { new_page(tab.url) });
 
+    //TODO: add ability to parse #hash value query parameters
+
     //TODO: add ability to copy the link with ZeroCopy.js
 		//var copyLink = document.getElementById("copyLink");
     //copyLink.addEventListener('click', function () { new_link(tab.url) });
