@@ -26,6 +26,8 @@
         "grunt-contrib-concat": "latest",
         "grunt-contrib-compress": "latest",
         "grunt-karma": "latest",
+        "karma-jasmine": "latest",
+        "karma-phantomjs-launcher" : "latest",
         "grunt-file-creator": "latest",
         "jasmine-node": "latest",
         "chai": "latest",

@@ -11,39 +11,43 @@ describe("queryStringParser", function() {
 
 	describe("getValues()", function(){
 		it("should parse one value", function() {
-			evaluateItem("http://github.com/?me=you", {me: "you"});
+			evaluateItem("http://github.com/?me=you", [{me: "you"}]);
 		});
 
 		it("should parse 2 values", function() {
-			evaluateItem("http://github.com/?me=you&yomama=andyourcousintoo", {me: "you", yomama: 'andyourcousintoo'});
+			evaluateItem("http://github.com/?me=you&yomama=andyourcousintoo", [{me: "you"}, {yomama: 'andyourcousintoo'}]);
 		});
 
 		it("should parse multi values", function() {
-			evaluateItem("http://github.com/?me=you&yomama=andyour,cousintoo", {me: "you", yomama: 'andyour,cousintoo'});
+			evaluateItem("http://github.com/?me=you&yomama=andyour,cousintoo", [{me: "you"},{yomama: 'andyour,cousintoo'}]);
 		});
 
 		it("should parse with a + in the values", function() {
-			evaluateItem("http://github.com/?me=you&yomama=andyour+cousintoo", {me: "you", yomama: 'andyour cousintoo'});
+			evaluateItem("http://github.com/?me=you&yomama=andyour+cousintoo", [{me: "you"}, {yomama: 'andyour cousintoo'}]);
 		});
 
 		it("should parse with an encoded value", function() {
-			evaluateItem("http://github.com/?me=you%20too&yomama=andyour%20%26%20cousintoo", {me: "you too", yomama: 'andyour & cousintoo'});
+			evaluateItem("http://github.com/?me=you%20too&yomama=andyour%20%26%20cousintoo", [{me: "you too"}, {yomama: 'andyour & cousintoo'}]);
+		});
+
+    it("should parse multiple keys with the same name", function() {
+      evaluateItem("http://github.com/?me=tarzan&you=mary&you=jane", [{me: "tarzan"}, {you: "mary"}, {you: "jane"}]);
+    });
+
+		it("should return empty object when there is no query", function() {
+			evaluateItem("http://github.com", []);
 		});
 
 		it("should return empty object when there is no query", function() {
-			evaluateItem("http://github.com", {});
+			evaluateItem("http://github.com/", []);
 		});
 
 		it("should return empty object when there is no query", function() {
-			evaluateItem("http://github.com/", {});
-		});
-
-		it("should return empty object when there is no query", function() {
-			evaluateItem("http://github.com/?", {});
+			evaluateItem("http://github.com/?", []);
 		});
 
 		it("should return a key but no value", function() {
-			evaluateItem("http://github.com/?me=", {me: ''});
+			evaluateItem("http://github.com/?me=", [{me: ''}]);
 		});
 
 		function evaluateItem(item, expected){

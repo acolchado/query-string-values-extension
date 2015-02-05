@@ -10,16 +10,20 @@ window.processTabUrl = function(tabUrl) {
 	var values = parser.getValues(query);
 	var itemsFound = false;
 
-	if(values!==null){
+	if(values.length){
 		var table = document.getElementById("query-values");
-		for(var name in values){
+
+
+		for(var i = 0, len = values.length; i< len; i++){
 			itemsFound = true;
 			var row = document.createElement("tr");
 			var colName = document.createElement("td");
 			var colValue = document.createElement("td");
 
-			colName.innerHTML = name;
-			colValue.innerHTML = values[name] || "&nbsp;";
+      for(var key in values[i]){
+        colName.innerHTML = key;
+        colValue.innerHTML = values[i][key] || "&nbsp;";
+      }
 
 			row.appendChild(colName);
 			row.appendChild(colValue);

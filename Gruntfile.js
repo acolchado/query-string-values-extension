@@ -20,7 +20,7 @@ module.exports = function(grunt) {
         },
         clean: {
             all: [
-                'build/temp/',
+                'build/temp/'
             ]
         },
         compress: {

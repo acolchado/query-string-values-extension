@@ -4,12 +4,13 @@ function QueryStringParser(){
 
 	this.getValues = function(url){
 		var query = this.getQueryFromUrl(url);
-		var values = {};
+		var values = [];
 		var match;
 		while (!!(match = this.regExQuerySearch.exec(query))){
-			values[this.decode(match[1])] = this.decode(match[2]);
+      var kv = {};
+			kv[this.decode(match[1])] = this.decode(match[2]);
+      values.push(kv);
 		}
-
 		return values;
 	};
 
