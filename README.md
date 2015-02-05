@@ -37,9 +37,14 @@ From the Extensions Manager follow these steps:
 * Navigate to the repo directory and select the "extension" directory
   * Should be ~/Code/query-string-values-extension/extension
 
+## Testing
+Run tests with 
+
+	grunt karma
+
 ## Using the extension
 
-I haven't created a cool looking icon for this yet, but next to the navigation bar, you should see this icon ![Alt Query String Values] (https://raw.github.com/acolchado/query-string-values-extension/master/extension/img/icon-16.png), click it and you will see all of the query stirng values.
+I haven't created a cool looking icon for this yet, but next to the navigation bar, you should see this icon ![Alt Query String Values] (https://raw.github.com/acolchado/query-string-values-extension/master/extension/img/icon-16.png), click it and you will see all of the query string values.
 
 ## Contributing
 
