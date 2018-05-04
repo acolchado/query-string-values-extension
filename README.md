@@ -1,5 +1,4 @@
 # Query String Values Chrome Extension
-===
 
 ## NOT ACTIVELY MAINTAINED: While the extension is still available and working in the Chrome store, there is no plan to enhance or update the extension at this moment.
 
