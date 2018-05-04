@@ -1,5 +1,7 @@
-![Alt Query String Values] (https://raw.github.com/acolchado/query-string-values-extension/master/extension/img/icon-38.png) Query String Values Chrome Extension
+# Query String Values Chrome Extension
 ===
+
+## NOT ACTIVELY MAINTAINED: While the extension is still available and working in the Chrome store, there is no plan to enhance or update the extension at this moment.
 
 Chrome extension that allows you to see the current tab's query string values in a clean form.
 
