@@ -33,18 +33,18 @@ header {
 	display: block;
 }
 
-.query-values {
+.values {
 	width: 100%;
 	border-collapse: collapse;
 	border: 1px solid #ccc;
 }
 
-.query-values tr th {
+.values tr th {
 	font-weight: bold;
 	text-align: left;
 }
 
-.query-values tr td, .query-values tr th {
+.values tr td, .values tr th {
 	width: 50%;
 	border-left: 1px solid #ccc;
 	border-top: 1px solid #ccc;
@@ -52,19 +52,19 @@ header {
 	background-color: #ccc;
 }
 
-.query-values tr:nth-child(even) td {
+.values tr:nth-child(even) td {
 	background-color: #fffff4;
 }
 
-.query-values tr:nth-child(odd) td {
+.values tr:nth-child(odd) td {
 	background-color: #FFF;
 }
 
-.query-values tr td:first-child, .query-values tr th:first-child {
+.values tr td:first-child, .values tr th:first-child {
 	border-left: none;
 }
 
-.query-values tr th {
+.values tr th {
 	border-top: none;
 }
 
